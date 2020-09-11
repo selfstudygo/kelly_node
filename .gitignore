@@ -1,0 +1,11 @@
+node_modules
+download
+public
+vendor
+
+.idea/
+.DS_Store
+.vscode/*
+*.tmp
+*.bak
+*.swp
