@@ -2,24 +2,18 @@
 
 ```bash
 crontab -e
-* * * * /bin/bash /home/devimal/Desktop/demo.sh
 ```
 
-demo.sh
 ```bash
-# Load nvm
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-nvm use 12
+* * * * * /bin/bash /Users/kyunghwa/private/crawling/script/job.sh
+# 분 시 일 월 요일
+# chmod +x /Users/kyunghwa/private/crawling/job.sh
+```
 
-# now node works
-node -e "console.log('hello')"
-node --version
-
-# npm works too!
-npm --version
+job.sh
+```bash
+say "Hello"
 ```
 
 https://gist.github.com/simov/cdbebe2d65644279db1323042fcf7624
-
 https://jhnyang.tistory.com/68
