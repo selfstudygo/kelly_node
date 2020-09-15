@@ -2,6 +2,7 @@ node_modules
 download
 public
 vendor
+.private_keys
 
 .idea/
 .DS_Store
