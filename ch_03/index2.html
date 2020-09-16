@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="keywords" content="markup; css; javascript">
+  <meta name="author" content="kelly">
+  <meta name="description" content="kelly's markup, css, javascript blog">
+  <meta name="format-detection" content="telephone=no,address=no,email=no">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=2.0">
+  <meta property="og:title" content="Kelly's Blog">
+  <meta property="og:description" content="kelly's markup, css, javascript blog">
+  <title>Kelly's BLOG</title>
+  <script>
+    const { ipcRenderer } = require('electron');
+    const a = 3;
+    const b = 6;
+    window.addEventListener('DOMContentLoaded', (e) => {
+      document.getElementById('info-sync').innerHTML = `${a}*${b}=${ipcRenderer.sendSync('sync-mul', { a, b })}`;
+      ipcRenderer.on('async-mul-res', (e, { data }) => {
+        document.getElementById('info-async').innerHTML = `${a}*${b}=${data}`;
+      });
+      ipcRenderer.send('async-mul', { a, b })
+    });
+  </script>
+</head>
+<body id="Home">
+<div>
+  Sync:
+  <span id="info-sync"></span>
+</div>
+<div>
+  Async:
+  <span id="info-async"></span>
+</div>
+</body>
+</html>
