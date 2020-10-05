@@ -1,0 +1,96 @@
+---
+extends:
+  - "airbnb"
+  - "prettier"
+plugins:
+  - "chai-expect"
+  - "jest"
+  - "prettier"
+rules:
+  prettier/prettier: 2
+  arrow-parens: 0
+  no-return-assign: 0
+  object-curly-newline: 0
+  implicit-arrow-linebreak: 0
+  operator-linebreak: 0
+  lines-between-class-members: 0
+  camelcase: 0
+  prefer-destructuring: 0
+  no-restricted-globals: 1
+  import/no-cycle: 1
+  import/prefer-default-export: 0
+  import/no-named-as-default: 0
+  import/no-extraneous-dependencies:
+    - 2
+    - devDependencies:
+      - "./jest.setup.js"
+      - "./__mocks__/**"
+      - "**/*.spec.js"
+  react/no-unused-prop-types: 1
+  react/sort-comp: 1
+  react/no-danger: 0
+  react/jsx-filename-extension: 0
+  react/require-default-props: 0
+  react/no-array-index-key: 1
+  react/no-did-update-set-state: 0  #https://github.com/airbnb/javascript/issues/1875
+  react/destructuring-assignment: 0
+  react/jsx-wrap-multilines: 0
+  react/jsx-one-expression-per-line: 0
+  react/button-has-type: 0
+  react/no-access-state-in-setstate: 1
+  jsx-a11y/click-events-have-key-events: 0
+  jsx-a11y/alt-text: 0
+  jsx-a11y/img-has-alt: 0
+  jsx-a11y/no-autofocus: 0
+  jsx-a11y/media-has-caption: 0
+  jsx-a11y/no-static-element-interactions: 0
+  jsx-a11y/no-noninteractive-element-interactions: 0
+  class-methods-use-this: 1
+  no-constant-condition:
+    - 1
+    - checkLoops: false
+  no-console:
+    - 1
+    - allow:
+      - warn
+      - error
+      - info
+  # no-trailing-spaces:
+  #   - 2
+  #   - skipBlankLines: true #webstorm
+  # max-len:
+  #   - 1
+  #   - 120
+  #   - 2
+  #   - ignoreComments: true
+  #     ignoreUrls: true
+  #     ignoreStrings: true
+  #     ignoreTemplateLiterals: true
+  #     ignorePattern: "<((path|svg)[^>]*)|url([^)]*)>"
+  no-unused-expressions:
+    - 2
+    - allowTaggedTemplates: true
+globals:
+  fetch: true
+  i18n: true
+  window: true
+  navigator: true
+  screen: true
+  document: true
+  moment: true
+  expect: true
+  Element: true
+  Event: true
+  CustomEvent: true
+  Image: true
+  FormData: true
+  File: true
+  Blob: true
+parser: "babel-eslint"
+settings:
+  import/resolver:
+    webpack:
+      config: "webpack.config.js"
+env:
+  jest/globals: true
+  node: true

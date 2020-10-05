@@ -1,0 +1,13 @@
+Publisher App ID / Store ID,Platform,Event Name,Event Value,Bid(USD),Ordinal Status
+DEFAULT_PER_APP_BID_GROUP_ID,,reach_castle_lv#,3,1,Y
+DEFAULT_PER_APP_BID_GROUP_ID,,reach_castle_lv#,4,2,Y
+DEFAULT_PER_APP_BID_GROUP_ID,,5,N
+com.tapjoy.test,ANDROID,reach_castle_lv#,3,0.5,Y
+com.tapjoy.test,ANDROID,reach_castle_lv#,4,1,Y
+com.tapjoy.test,ANDROID,make a purchase,,2.5,N
+com.tapjoy.mytapjoy2,ios,reach_castle_lv#,3,0.1,Y
+com.tapjoy.mytapjoy2,ios,reach_castle_lv#,4,0.2,Y
+com.tapjoy.mytapjoy2,ios,make a purchase,
+3055c0f9-004b-4d19-a800-df6b135d0850,ANDROID,reach_castle_lv#,3,5,Y
+3055c0f9-004b-4d19-a800-df6b135d0850,ANDROID,reach_castle_lv#,4,10,Y
+3055c0f9-004b-4d19-a800-df6b135d0850,ANDROID,make a purchase,,20,N

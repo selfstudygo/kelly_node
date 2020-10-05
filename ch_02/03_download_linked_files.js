@@ -10,7 +10,7 @@ const list = {};
 const checkSaveDir = (fname) => {
   const dirList = path.dirname(fname).split('/');
   let dir = '';
-  for(name of dirList) {
+  for(const name of dirList) {
     dir += `${name}/`;
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir);
